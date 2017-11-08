@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test skew</title>
+  <style type="text/css">
+    /******
+* DEMO
+*******/
+/* /!\ */
+/* Demo specific css
+   ========================================================================== */
+body{ margin: 0; font: 400 100%/1.4 'Open Sans',sans-serif; color: #555; }
+*{ box-sizing: border-box; }
+*::after,*::before{ box-sizing: border-box; }
+h1{ font-size: 2rem; }
+h2{ font-size: 1.4rem; color: #8cc84b; }
+h3{ font-size: 1.1rem; }
+p { font-size: 0.9rem; }
+ul{ padding:0; list-style-position: inside; }
+li{ font-size: 0.9rem; margin: 0; }
+
+.header {
+  background: #8cc84b;
+  position: relative;
+  margin-bottom: 50px;
+  color: white;
+  padding: 4em 0 1em;
+  text-align: center;
+}
+.header a {
+  color: inherit;
+  text-decoration: none;
+}
+.header:before {
+  background: inherit;
+  content: '';
+  display: block;
+  height: 50%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  bottom: 0;
+  transform: skewY(3deg);
+  transform-origin: 0;
+}
+.header h1 {
+  display: inline-flex;
+  align-items: center;
+  font-size: 3rem;
+  border-bottom: 10px solid #fff;
+  border-top: 10px solid #fff;
+  border-radius: 18px;
+  padding: .8rem 2.6rem;
+  text-transform: uppercase;
+  margin-bottom: .3em;
+}
+.header h1:before {
+  content: '';
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+  margin-right: 5px;
+  height: 40px;
+  width: 42px;
+  border: 1px solid #8cc84b;
+  background-color: white;
+  background-image: linear-gradient(to top, #8cc84b 2px, transparent 2px), linear-gradient(to left, #8cc84b 2px, transparent 2px), linear-gradient(to left, #8cc84b 2px, transparent 2px);
+  background-size: 100% 50%, 50% 50%, 100%, 100%;
+  background-position: 0 0, 0 100%, 0 0;
+  background-repeat: repeat-y, repeat-x;
+}
+.header p {
+  color: #fff;
+  margin: 0 auto;
+}
+  </style>
+</head>
+<body>
+   <header class="header">
+    <div><a href="index.html">
+        <h1>ĐỨCNHÂN</h1>
+        <p>Nhân Nguyễn là CoderTeam <br>(v1.2.1)</p>
+    </a></div>
+</header>
+</body>
+</html>
